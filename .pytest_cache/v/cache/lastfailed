@@ -1,0 +1,7 @@
+{
+  "tests/ads/test_ad.py::test_ad_list": true,
+  "tests/ads/test_ad.py::test_create_ad": true,
+  "tests/ads/test_ad.py::test_create_selection": true,
+  "tests/ads/test_ad.py::test_retrieve_ad": true,
+  "tests/ads/test_selection.py::test_create_selection": true
+}

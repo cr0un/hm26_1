@@ -1,0 +1,12 @@
+[
+  "tests/ads/test_ad.py::test_ad_list",
+  "tests/ads/test_ad.py::test_ads_list",
+  "tests/ads/test_ad.py::test_create_ad",
+  "tests/ads/test_ad.py::test_create_selection",
+  "tests/ads/test_ad.py::test_retrieve_ad",
+  "tests/ads/test_ad_create.py::test_ad_create",
+  "tests/ads/test_ads_list.py::test_ads_list",
+  "tests/ads/test_retrieve_ad.py::test_retrieve_ad",
+  "tests/ads/test_selection.py::test_create_selection",
+  "tests/ads/test_selection_create.py::test_selection_create"
+]
