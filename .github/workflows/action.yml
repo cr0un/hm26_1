@@ -28,7 +28,6 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           source: |
             docker-compose.yml
-            config.py
           target: "/hm26_1"
       - name: Install Docker Compose
         run: |
@@ -38,6 +37,11 @@ jobs:
           sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
       - name: Run Docker Compose
-        run: |
-          cd /home/hm26_1/
-          docker-compose up -d
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /hm26_1
+            docker-compose up -d
