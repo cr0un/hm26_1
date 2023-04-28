@@ -39,5 +39,5 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
       - name: Run Docker Compose
         run: |
-          cd /home/ubuntu/your_app_name/
+          cd /home/hm26_1/
           docker-compose up -d
