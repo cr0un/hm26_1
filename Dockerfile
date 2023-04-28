@@ -1,6 +1,9 @@
 # Укажите базовый образ с Python
 FROM python:3.10
 
+RUN python -m venv /app/env
+ENV PATH="/app/env/bin:$PATH"
+
 # Установите рабочую директорию
 WORKDIR /app
 
