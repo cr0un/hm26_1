@@ -19,4 +19,4 @@ RUN #python manage.py migrate
 RUN #python manage.py load_data
 
 # Запускайте приложение на порту 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
