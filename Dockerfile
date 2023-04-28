@@ -11,7 +11,7 @@ WORKDIR /app
 COPY . .
 
 # Установите зависимости проекта
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Запускайте миграции и команду для загрузки данных
 RUN python manage.py migrate
