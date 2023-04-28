@@ -21,7 +21,7 @@ jobs:
       - name: Install SSH client
         run: sudo apt-get update && sudo apt-get install -y openssh-client
       - name: Copy files to server
-        uses: appleboy/scp-action@v2
+        uses: appleboy/scp-action@0.1.10
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
