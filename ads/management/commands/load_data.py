@@ -22,7 +22,8 @@ class Command(BaseCommand):
                 for row in reader:
                     Category.objects.create(
                         # id=row['id'],
-                        name=row['name']
+                        name=row['name'],
+                        slug=row['slug']
                     )
             self.stdout.write(self.style.SUCCESS('Успешно загружен categories'))
 

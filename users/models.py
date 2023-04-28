@@ -44,7 +44,7 @@ class User(AbstractUser):
     age = models.PositiveSmallIntegerField(null=True, verbose_name="Возраст")
     locations = models.ManyToManyField(Location, verbose_name="Локация")
     birth_date = models.DateField(null=True, verbose_name="Дата рождения", validators=[validate_birth_date])
-    email = models.EmailField(null=False, unique=True, verbose_name="Электронная почта", validators=[
+    email = models.EmailField(verbose_name="Электронная почта", validators=[
         validate_email_domain])
 
     def __str__(self):

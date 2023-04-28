@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure--x+dljj7c@m%%%w+2%0swkc(i5xz4de)ewvfyu+x7pcbopbo81
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cr0un.xyz', 'localhost']
+
 
 
 # Application definition
@@ -84,7 +85,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
+        'HOST': 'pg',
         'PORT': '5432',
     }
 }
@@ -145,4 +146,6 @@ REST_FRAMEWORK = {
 TOTAL_ON_PAGE = 10
 
 AUTH_USER_MODEL = 'users.User'
+
+
 
