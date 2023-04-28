@@ -29,7 +29,7 @@ jobs:
           source: |
             docker-compose.yml
             config.py
-          targetPath: /home/ubuntu/your_app_name/
+          target: "hm26_1"
       - name: Install Docker Compose
         run: |
           sudo apt-get remove docker-compose
