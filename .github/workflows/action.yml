@@ -49,4 +49,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd hm26_1
+            export DB_USER=${{ env.DB_USER }}
+            export DB_PASSWORD=${{ env.DB_PASSWORD }}
+            export DB_NAME=${{ env.DB_NAME }}
             echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
