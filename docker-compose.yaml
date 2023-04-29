@@ -1,7 +1,7 @@
 version: "3.10"
 services:
   api:
-    image: cr0un/hm26_1:version-1
+    image: cr0un/hm26_1:$GITHUB_REF_NAME-$GITHUB_RUN_ID
     ports:
     - 8000:8000
     depends_on:
