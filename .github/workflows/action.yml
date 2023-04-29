@@ -28,8 +28,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          source: "deploy1/docker-compose.yaml"
-          target: "hm26_1"
+          source: "docker-compose.yaml"
+          target: "/home/deploy1/hm26_1/"
           strip_components: 1
       - name: run docker-compose
         uses: appleboy/ssh-action@master
