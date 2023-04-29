@@ -1,7 +1,7 @@
 version: "3.10"
 services:
   api:
-    image: cr0un/hm26_1:${{ github.ref_name }}-${{ github.run_id }}
+    image: cr0un/hm26_1:version-1
     ports:
     - 8000:8000
     depends_on:
@@ -12,8 +12,8 @@ services:
   postgres:
     image: postgres:latest
     environment:
-      POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
-      POSTGRES_DB: ${{ secrets.DB_NAME }}
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
