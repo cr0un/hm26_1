@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: docker build
         run: docker build -t cr0un/hm26_1:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
       - name: docker login
@@ -28,8 +28,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          port: ${{ secrets.PORT }}
-          source: "deploy1/hm26_1/docker-compose.yml"
+          source: "deploy1/docker-compose.yml"
           target: "hm26_1"
           strip_components: 1
       - name: Run Docker Compose
