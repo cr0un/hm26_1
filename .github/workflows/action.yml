@@ -17,15 +17,15 @@ jobs:
     needs: build_and_push
     steps:
       - name: clone code
-        uses: actions/checkout@v0.1.4
+        uses: actions/checkout@v2
       - name: Copy files to server
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "deploy1/docker-compose.yml"
+          source: "deploy1/hm26_1/docker-compose.yml"
           target: "hm26_1"
           strip_components: 1
       - name: Run Docker Compose
