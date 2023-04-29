@@ -42,11 +42,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          env: |
-            GITHUB_REF_NAME=${{ github.ref_name }}
-            GITHUB_RUN_ID=${{ github.run_id }}
-            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
-            DB_NAME=${{ secrets.DB_NAME }}
           script: |
             cd hm26_1
             echo ${{ secrets.SSH_PASSWORD }} | sudo -S docker-compose up -d
