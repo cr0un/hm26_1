@@ -23,7 +23,7 @@ jobs:
       - name: clone code
         uses: actions/checkout@v3
       - name: Copy files to server
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USERNAME }}
