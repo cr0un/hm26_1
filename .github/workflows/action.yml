@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Prepare deployment folder
         run: |
-          mkdir deploy
+          mkdir deploy1
           cp ./docker-compose.yaml deploy1/
 
       - name: clone files to server
